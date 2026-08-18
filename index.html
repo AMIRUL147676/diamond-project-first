@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Fire Diamond</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #111827;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 400px;
+      background: #1f2937;
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #d1d5db;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    input, select {
+      background: white;
+      color: #111827;
+    }
+
+    button {
+      background: #16a34a;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #15803d;
+    }
+
+    #message {
+      margin-top: 18px;
+      color: #86efac;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>💎 Free Fire Diamond</h1>
+    <p>আপনার Free Fire UID দিন</p>
+
+    <input
+      type="number"
+      id="uid"
+      placeholder="Free Fire UID"
+      required
+    >
+
+    <select id="diamond">
+      <option value="">Diamond নির্বাচন করুন</option>
+      <option value="100">100 Diamond</option>
+      <option value="310">310 Diamond</option>
+      <option value="520">520 Diamond</option>
+      <option value="1060">1060 Diamond</option>
+    </select>
+
+    <button onclick="submitUID()">Submit</button>
+
+    <div id="message">
+      ✅ UID গ্রহণ করা হয়েছে!
+    </div>
+  </div>
+
+  <script>
+    function submitUID() {
+      const uid = document.getElementById("uid").value;
+      const diamond = document.getElementById("diamond").value;
+      const message = document.getElementById("message");
+
+      if (uid === "" || diamond === "") {
+        alert("UID এবং Diamond amount নির্বাচন করুন।");
+        return;
+      }
+
+      message.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
